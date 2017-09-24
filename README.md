@@ -1,26 +1,15 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+Esto es una App desarrollada por [Eliu Ortega](https://github.com/MelloMarziano/).
+## De que trata esta APP
 
-## How to use this template
+*Esta APP* Esta pensada para facilitarle la vida a los jugadores a la hora de realizar sus jugadas permitiendoles hacerla desde su casa por medio de un sistema de recarga.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Para usar la APP sera necesario inscribirse en una de las bancas autorizadas.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+### Hacerca del creador...
 
-### With the Ionic CLI:
+[Eliu Ortega](https://github.com/MelloMarziano/). Es el Creador de esta *APP* y sus colaboradores principales hasta la fecha son:
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+[Severina Brazoban](https://github.com/MelloMarziano/). Ing. de Sistema encargada del proyecto. 
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
+*Simphony Developer's Group 2017*
 
