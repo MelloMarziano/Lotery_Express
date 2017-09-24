@@ -1,0 +1,153 @@
+@font-face{
+	font-family:'global';
+	src:url('../assets/font/global.TTF') format('truetype');
+}
+
+@font-face{
+	font-family:'titulos';
+	src:url('../assets/font/titulos.otf') format('truetype');
+}
+
+
+.labelTitulo{
+	font-family:'titulos';
+	color:#ECF0F1;
+	font-size:25px;
+	font-style:bold;
+	margin:-10% 0px;
+	
+}
+
+.todo{
+	background:#2c3e50;
+	overflow-y:auto;
+	width:100vw;
+	height:100vh;
+}
+.cuadro{
+	
+	height:70%;
+	
+	margin:20px;
+	display:flex;
+	flex-flow:row wrap;
+
+	align-items:center;
+	justify-content:center;
+}
+
+.contenido{
+	border:2px solid #FFF;
+	border-radius:10px;
+	display:flex;
+	flex-flow:column wrap;
+
+	align-items:space-around;
+	justify-content:flex-start;
+}
+
+.inputs{
+	border:2px solid #2C3E50;
+	height:40px;
+	width:100%;
+	border-radius:5px;
+	padding:5px 20px;
+	margin:10px 0px;
+}
+
+.header{
+	background-image: url('../assets/img/bolos.jpg');
+	background-size: cover;
+	height:30%;
+	width:100vw;
+	
+	
+}
+
+.fondo{
+	height:30%;
+	width:100vw;
+	opacity: 0.9;
+	background:#2C3E50;
+	padding:0px 0px 30px 0px;
+
+	display:flex;
+	flex-flow:column wrap;
+
+	align-items:center;
+	justify-content:flex-end;
+}
+
+.label{
+	color:#2C3E50;
+	font-size:15px;
+	margin:10px 0px;
+
+	font-family:'global';
+	font-style:bold;
+}
+
+.lblUno{
+	transform: scaleX(-1);
+	display: inline-block;
+	font-size: 75px;
+	margin-right: -11%;
+
+	-webkit-text-fill-color:#ECF0F1;
+	-webkit-text-stroke:1px #2C3E50;
+}
+
+.lblDos{
+	font-size: 75px;
+	display: inline-block;
+	margin-left: -11%;
+
+	-webkit-text-fill-color:#ECF0F1;
+	-webkit-text-stroke:1px #2C3E50;
+}
+
+.btnIngresar{
+	background:#2C3E50;
+	font-family:'global';
+	font-style:bold;
+	height: 50px;
+
+	display:flex;
+	flex-flow:row wrap;
+
+	align-items:center;
+	justify-content:center;
+	color:#ECF0F1;
+	font-size: 20px;
+	border-radius: 5px;
+
+	box-shadow: 0px 0px 5px 0px #2C3E50;
+}
+
+.otrosBtn{
+	margin-top:6%;
+	display:flex;
+	flex-flow:row wrap;
+
+	align-items:center;
+	justify-content:space-between;
+}
+
+.label2{
+	color:#E74C3C;
+	font-size:12px;
+	font-family:'global';
+	font-style:bold;
+}
+
+.label3{
+	color:#2C3E50;
+	font-size:12px;
+	font-family:'global';
+	font-style:bold;
+}
+
+
+page-login {
+
+}

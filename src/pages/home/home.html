@@ -1,14 +1,57 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<div class="todo-home">
+	
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+	<div class="contenido-home">
+		<div class="contenido-total">
+			<div class="parte-arriba">
+				<div class="foto">
+					<img src="assets/img/man.png" alt="">
+				</div>
+				<div class="otro-arriba">
+					<div class="uno-arriba">
+						<span class="texto-arriba">Eliu Ortega</span>
+					</div>
+					<div class="dos-arriba">
+						<span class="texto-arriba">RD$ 1,200.00</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="contenido-resultados">
+				<div class="resultados">
+					<div class="listica" *ngFor="let res of resultados">
+					
+						<div class="img-listica">
+							<img src="{{res.img}}" alt="" class="logo">
+						</div>
+						<div class="cont-listica">
+							<div class="titulo-fecha">
+								<span class="textoTituloFecha">{{res.nombre}}</span>
+								<small class="textoTituloFecha">{{res.fecha}}</small>
+							</div>
+							<div class="resultado-numeros {{res.nombre}}">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="cuadritos-contenido">
+				<div class="cuadrito1">
+					<span class="texto">Jugar</span>
+				</div>
+
+				<div class="cuadrito12">
+					<img src="assets/img/history.png" alt="">
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+</div>
