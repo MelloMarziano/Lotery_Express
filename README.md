@@ -9,7 +9,7 @@ Para usar la APP sera necesario inscribirse en una de las bancas autorizadas.
 
 [Eliu Ortega](https://github.com/MelloMarziano/). Es el Creador de esta *APP* y sus colaboradores principales hasta la fecha son:
 
-[Severina Brazoban](https://github.com/MelloMarziano/). Ing. de Sistema encargada del proyecto. 
++[Severina Brazoban](https://github.com/MelloMarziano/). Ing. de Sistema encargada del proyecto. 
 
-*Simphony Developer's Group 2017*
+=========================**Simphony Developer's Group 2017**=========================
 
