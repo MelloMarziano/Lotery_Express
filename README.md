@@ -1,7 +1,7 @@
 *Esto es una App desarrollada por [Eliu Ortega](https://github.com/MelloMarziano/).*
-<center> 
+
 ## De que trata esta APP 
-</center>
+
 *Esta APP* Esta pensada para facilitarle la vida a los jugadores a la hora de realizar sus jugadas permitiendoles hacerla desde su casa por medio de un sistema de recarga.
 
 Para usar la APP sera necesario inscribirse en una de las bancas autorizadas.
@@ -12,6 +12,5 @@ Para usar la APP sera necesario inscribirse en una de las bancas autorizadas.
 
 2. [Severina Brazoban](https://github.com/Severina01/). Ing. de Sistema encargada del proyecto. 
 
-<center>
-**Simphony Developer's Group 2017**
-</center>
+
+==========**Simphony Developer's Group 2017**==========
