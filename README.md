@@ -1,5 +1,10 @@
 *Esto es una App desarrollada por [Eliu Ortega](https://github.com/MelloMarziano/).*
 
+
+![imagen del logo](https://github.com/MelloMarziano/Lotery_Express/blob/master/src/assets/img/LogoSim.png)
+
+
+
 ## De que trata esta APP 
 
 *Esta APP* Esta pensada para facilitarle la vida a los jugadores a la hora de realizar sus jugadas permitiendoles hacerla desde su casa por medio de un sistema de recarga.
