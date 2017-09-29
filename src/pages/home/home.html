@@ -1,23 +1,83 @@
 <div class="todo-home">
 	
-
-	<div class="contenido-home">
-		<div class="contenido-total">
-			<div class="parte-arriba">
-				<div class="foto">
-					<img src="assets/img/man.png" alt="">
+	<div class="parte-arriba">
+		<div class="ladoFoto">
+			<img src="assets/img/man.png" alt="">
+		</div>
+		<div class="ladoUsuarios">
+			<div class="cuadroUsuario">
+				<div class="cuadroLabel">
+					<div class="labelUs">Usuario</div>
 				</div>
-				<div class="otro-arriba">
-					<div class="uno-arriba">
-						<span class="texto-arriba">Eliu Ortega</span>
-					</div>
-					<div class="dos-arriba">
-						<span class="texto-arriba">RD$ 1,200.00</span>
-					</div>
+				<div class="cuadroTexto">
+					<div class="labelContex">@KingMello</div>
 				</div>
 			</div>
+			<div class="cuadroSaldo">
+				<div class="cuadroLabel2">
+					<div class="labelSa">Saldo $</div>
+				</div>
+				<div class="cuadroTexto">
+					<div class="labelContex">1,200.00</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-			<div class="contenido-resultados">
+	<div class="parteFecha">
+		<div class="cuadroFecha">
+			<div class="textoFecha">28/09/2017</div>
+		</div>
+		<div class="cuadroPicker">
+			<img src="assets/img/calendar.png" alt="">
+		</div>
+	</div>
+
+
+	
+	<div class="contenido-resultados">
+		<div class="resultados">
+				<div class="listica" *ngFor="let res of resultados">
+					
+					<div class="img-listica">
+						<img src="{{res.img}}" alt="" class="logo">
+					</div>
+					<div class="cont-listica">
+						<div class="titulo-fecha">
+							<span class="textoTituloFecha">{{res.nombre}}</span>
+						</div>
+						<div class="resultado-numeros {{res.nombre}}">
+								
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="parteBotones">
+		<div class="btnJugar">Jugar</div>
+		<div class="btnHistorial">
+			<img src="assets/img/history.png" class="imgHistorial">
+		</div>
+	</div>
+
+
+
+
+	
+</div>
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="contenido-resultados">
 				<div class="resultados">
 					<div class="listica" *ngFor="let res of resultados">
 					
@@ -36,22 +96,5 @@
 					</div>
 				</div>
 			</div>
-			
-			
-			<div class="cuadritos-contenido">
-				<div class="cuadrito1">
-					<span class="texto">Jugar</span>
-				</div>
 
-				<div class="cuadrito12">
-					<img src="assets/img/history.png" alt="">
-				</div>
-
-			</div>
-
-		</div>
-
-
-
-	</div>
-</div>
+-->

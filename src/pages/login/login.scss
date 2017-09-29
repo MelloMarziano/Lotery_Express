@@ -9,26 +9,14 @@
 }
 
 
-.labelTitulo{
-	font-family:'titulos';
-	color:#ECF0F1;
-	font-size:25px;
-	font-style:bold;
-	margin:-10% 0px;
-	
-}
+
 
 .todo{
 	background:#2c3e50;
 	overflow-y:auto;
 	width:100vw;
 	height:100vh;
-}
-.cuadro{
-	
-	height:70%;
-	
-	margin:20px;
+
 	display:flex;
 	flex-flow:row wrap;
 
@@ -36,40 +24,24 @@
 	justify-content:center;
 }
 
-.contenido{
-	border:2px solid #FFF;
-	border-radius:10px;
-	display:flex;
-	flex-flow:column wrap;
 
-	align-items:space-around;
-	justify-content:flex-start;
-}
-
-.inputs{
-	border:2px solid #2C3E50;
-	height:40px;
+.login-header{
 	width:100%;
-	border-radius:5px;
-	padding:5px 20px;
-	margin:10px 0px;
-}
-
-.header{
-	background-image: url('../assets/img/bolos.jpg');
+	height:30vh;
+	background:url('../assets/img/bolos.jpg');
 	background-size: cover;
-	height:30%;
-	width:100vw;
-	
 	
 }
 
-.fondo{
-	height:30%;
-	width:100vw;
-	opacity: 0.9;
-	background:#2C3E50;
-	padding:0px 0px 30px 0px;
+
+.contenido-login{
+	width:100%;
+	height:100%;
+	background-color:rgba(44, 62, 80,0.6);
+	border-bottom: 1px solid #000;
+	color:#FFF;
+	font-family:"titulos";
+	
 
 	display:flex;
 	flex-flow:column wrap;
@@ -78,76 +50,167 @@
 	justify-content:flex-end;
 }
 
-.label{
-	color:#2C3E50;
-	font-size:15px;
-	margin:10px 0px;
-
-	font-family:'global';
-	font-style:bold;
+.tituloLogoP{
+	margin-bottom: 15px;
+	font-size:25px;
 }
 
-.lblUno{
+.titulosUno{
+	width: 100%;
+	display:flex;
+	flex-flow:row wrap;
+
+	align-items:center;
+	justify-content:center;
+
+}
+
+.alrevesLogo{
 	transform: scaleX(-1);
-	display: inline-block;
+	
 	font-size: 75px;
-	margin-right: -11%;
-
+	margin-right: -11px;
 	-webkit-text-fill-color:#ECF0F1;
-	-webkit-text-stroke:1px #2C3E50;
+	-webkit-text-stroke:#ECF0F1;
 }
 
-.lblDos{
+.tituloLogo{
+	
 	font-size: 75px;
-	display: inline-block;
-	margin-left: -11%;
-
+	margin-left: -11px;
 	-webkit-text-fill-color:#ECF0F1;
-	-webkit-text-stroke:1px #2C3E50;
+	-webkit-text-stroke:#ECF0F1;
 }
 
-.btnIngresar{
-	background:#2C3E50;
-	font-family:'global';
-	font-style:bold;
-	height: 50px;
+.login-body{
+	width:100%;
+	height:70vh;
+	padding: 20px 20px 70px 20px;
+	display:flex;
+	flex-flow:row wrap;
+
+	align-items:center;
+	justify-content:center;
+}
+
+.contenido-body{
+	border:2px solid #DDD;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
 
 	display:flex;
 	flex-flow:row wrap;
 
 	align-items:center;
 	justify-content:center;
-	color:#ECF0F1;
-	font-size: 20px;
-	border-radius: 5px;
-
-	box-shadow: 0px 0px 5px 0px #2C3E50;
 }
 
-.otrosBtn{
-	margin-top:6%;
+.txtBody{
+	width: 100%;
+	height: 70%;
+	padding: 20px;
+
+	display:flex;
+	flex-flow:column wrap;
+
+	align-items:space-around;
+	justify-content:center;
+}
+
+.label{
+	color: #DDD;
+	font-size: 15px;
+	margin: 10px 0px;
+	font-family: "global";
+	font-style: bold;
+}
+
+
+.inputs{
+	border:2px solid #2C3E50;
+	height: 40px;
+	width: 100%;
+	border-radius: 5px;
+	padding: 5px 20px;
+	margin: 10px 0px;
+}
+
+.btnBody{
+
+	width: 100%;
+	height: 30%;
+	padding: 0px 30px;
+	display:flex;
+	flex-flow:column wrap;
+
+	align-items:center;
+	justify-content:flex-start;
+}
+
+.btnIngresar{
+	border-radius: 5px;
+
+	height: 50px;
+	width: 100%;
+	background: #2980b9;
+	color: #FFF;
+	font-family: "global";
+	font-size: 15px;
+
 	display:flex;
 	flex-flow:row wrap;
 
 	align-items:center;
+	justify-content:center;
+}
+
+.btnIngresar:active{
+	box-shadow: 0px 0px 10px 0px #DDD;
+}
+
+.btnRegistro{
+	width: 100%;
+	padding: 0px -20px;
+	display:flex;
+	flex-flow:row wrap;
+
+	align-items:flex-end;
 	justify-content:space-between;
 }
 
-.label2{
-	color:#E74C3C;
-	font-size:12px;
-	font-family:'global';
-	font-style:bold;
+.rojoLabel{
+	color:#e74c3c;
+	display: inline-block;
+	font-size: 12px;
+	font-family: "global";
 }
 
-.label3{
-	color:#2C3E50;
-	font-size:12px;
-	font-family:'global';
-	font-style:bold;
+.rojoLabel:active{
+	color:#FFF;
+}
+
+.blancoLabel:active{
+	color:#e74c3c;
+}
+
+.blancoLabel{
+	color:#FFF;
+	display: inline-block;
+	font-size: 12px;
+	font-family: "global";
 }
 
 
-page-login {
 
-}
+
+
+
+
+
+
+
+
+
+
+
