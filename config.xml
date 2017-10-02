@@ -84,4 +84,9 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
+    <plugin name="cordova-plugin-datepicker" spec="^0.9.3" />
+    <plugin name="com.synconset.imagepicker" spec="~2.1.8">
+        <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="Escoger Imagen" />
+    </plugin>
+    <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
 </widget>

@@ -2,7 +2,7 @@
 	
 	<div class="parte-arriba">
 		<div class="ladoFoto">
-			<img src="assets/img/man.png" alt="">
+			<img src="{{ImagenAvatar}}" alt="" (click)="cambioImagen()" class="ImagenAva">
 		</div>
 		<div class="ladoUsuarios">
 			<div class="cuadroUsuario">
@@ -26,10 +26,10 @@
 
 	<div class="parteFecha">
 		<div class="cuadroFecha">
-			<div class="textoFecha">28/09/2017</div>
+			<div class="textoFecha">{{fecha}}</div>
 		</div>
 		<div class="cuadroPicker">
-			<img src="assets/img/calendar.png" alt="">
+			<img src="assets/img/calendar.png" alt="" (click)="mostrarPicker()">
 		</div>
 	</div>
 
@@ -55,16 +55,12 @@
 	</div>
 
 	<div class="parteBotones">
-		<div class="btnJugar">Jugar</div>
+		<div class="btnJugar" (click)="goToGame()">Jugar</div>
 		<div class="btnHistorial">
 			<img src="assets/img/history.png" class="imgHistorial">
+			<span>Historial</span>
 		</div>
-	</div>
-
-
-
-
-	
+	</div>	
 </div>
 
 

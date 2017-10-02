@@ -1,0 +1,42 @@
+<div class="todoGame">
+	<div class="arriba-uno">
+		<div class="cuadroUsuarioG">
+			<div class="cuadroLabelG">
+				<div class="labelUsG">Seleccionado</div>
+			</div>
+			<div class="cuadroTextoG">
+				<div class="labelContexG">{{seleccion}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="arriba-dos">
+		
+	</div>
+
+	<div class="arriba-tres">
+		<div class="btnMenos" (click)="bajar()">
+			<span class="masMenos">-</span>
+		</div>
+		<div class="txtSaldo">{{txtSaldo}}</div>
+		<div class="btnMas">
+			<span class="masMenos" (click)="subir()">+</span>
+		</div>
+	</div>
+
+	<div class="arriba-cuatro">
+		<div class="btnCancelar" (click)="cancelar()">
+			<img src="assets/img/cancel-music.png" alt="">
+		</div>
+		<div class="btnPagar">Pagar</div>
+		<div class="btnLimpiar" (click)="limpiar()">
+			<img src="assets/img/broom.png" >
+		</div>
+	</div>
+
+	<div class="centroGame" >
+		<div class="cuadroGame" *ngFor="let item of paraCuadro" (click)="CambiarNombre(item.texto,item.numero)">
+			<img src="{{item.img}}" class="imgGame">
+
+		</div>
+	</div>
+</div>

@@ -1,7 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { DatePicker } from '@ionic-native/date-picker';
+import { ImagePicker } from '@ionic-native/image-picker';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 import { LoginPage } from '../login/login';
+import { JuegoPage } from '../juego/juego';
 import * as $ from 'jquery';
 
 @Component({
@@ -10,7 +14,9 @@ import * as $ from 'jquery';
 })
 export class HomePage {
 	
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private datePicker:DatePicker, private imagenPicker: ImagePicker,private androidPermissions: AndroidPermissions) {
+      this.fechaActual()
+      this.permisos();
   		//console.log(this.resultados);
   		//this.dividir();
   		//console.log(this.resultados.length);
@@ -18,6 +24,7 @@ export class HomePage {
   		//console.log(document.getElementById("nombres"));
 
   		$(document).ready(function(){
+        
   			//<div class="circulito-resul"></div>
   			var numero=$(".resultado-numeros").length;
   			for(var i=0; i<numero;i++){
@@ -33,8 +40,42 @@ export class HomePage {
   		
   }
 
+  public goToGame(){
+    this.navCtrl.push(JuegoPage);
+  }
+
+  permisos(){
+    this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE).then(
+          success => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.READ_EXTERNAL_STORAGE),
+          err => alert('Permisos Obtenidos')
+
+        );
+  }
+
+
+  today= new Date();
+
+
   public cerrarSesion(){
   	this.navCtrl.push(LoginPage);
+  }
+
+  ImagenAvatar='assets/img/man.png';
+
+  cambioImagen(){
+    var options={
+      maximumImagesCount:1
+    }
+    this.imagenPicker.getPictures(options).then((results)=>{
+      for(var i=0;i<results.length;i++){
+        
+        if(results[i]==""){
+          this.ImagenAvatar='assets/img/man.png';
+        }else{
+          this.ImagenAvatar=results[i];
+        }
+      }
+    },(err)=>{alert('No se Puede Obtener la imagen')});
   }
 
   resultados=
@@ -93,6 +134,50 @@ export class HomePage {
 
   public saber(){
   	console.log(this.letras);
+  }
+
+  dd:any;
+  mm:any;
+  yyy=0;
+  fecha="";
+
+  fechaActual(){
+    this.dd=this.today.getDate();
+    this.mm=this.today.getMonth()+1;
+    this.yyy=this.today.getFullYear();
+
+    if(this.dd < 10){
+      this.dd ='0'+this.dd;
+    }
+    if(this.mm < 10){
+      this.mm="0"+this.mm;
+    }
+    this.fecha=this.dd+"/"+this.mm+"/"+this.yyy;
+  }
+
+  cambio(fe){
+    this.dd=fe.getDate();
+    this.mm=fe.getMonth()+1;
+    this.yyy=fe.getFullYear();
+
+    if(this.dd < 10){
+      this.dd ='0'+this.dd;
+    }
+    if(this.mm < 10){
+      this.mm="0"+this.mm;
+    }
+    this.fecha=this.dd+"/"+this.mm+"/"+this.yyy;
+  }
+
+  mostrarPicker(){
+    this.datePicker.show({
+      date:new Date(),
+      mode:'date',
+      androidTheme:this.datePicker.ANDROID_THEMES.THEME_DEVICE_DEFAULT_LIGHT
+    }).then(
+      date => this.cambio(date),
+      err => console.log('Error al conseguir la fecha ',err)
+    );
   }
 
 
