@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController,Platform, AlertController } from 'ionic-angular';
 
 
 
@@ -18,13 +18,17 @@ import * as $ from 'jquery';
 })
 export class JuegoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+  	public navParams: NavParams, 
+  	public action:ActionSheetController, 
+  	public platform: Platform,
+  	public alerta:AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad JuegoPage');
   }
-  txtSaldo=10;
+  txtSaldo=1;
   seleccion="";
   paraCuadro=
   [
@@ -62,36 +66,98 @@ export class JuegoPage {
   ]
 
   subir(){
-  	this.txtSaldo=this.txtSaldo+10;
+  	this.txtSaldo=this.txtSaldo+1;
   }
 
   bajar(){
-  	if(this.txtSaldo==10){
-  		alert("Este es el Minimo que puede jugar");
+  	if(this.txtSaldo==1){
+  		let alert = this.alerta.create({
+	      title: 'Minimo',
+	      subTitle: 'Ups Este es el minimo que puedes jugar!!',
+	      buttons: ['OK']
+	    });
+	    alert.present();
   	}else{
-  		this.txtSaldo=this.txtSaldo-10;
+  		this.txtSaldo=this.txtSaldo-1;
   	}
   	
   }
 
   limpiar(){
   	this.seleccion=""
-  	this.txtSaldo=10;
+  	this.txtSaldo=1;
+  	$(document).ready(function(){
+  		$('.cuadritoG').remove();
+  	})
   }
 
   cancelar(){
   	this.seleccion=""
-  	this.txtSaldo=10;
+  	this.txtSaldo=1;
   	this.navCtrl.pop();
   }
 
   CambiarNombre(nombre,numero){
   	this.seleccion=nombre;
-  	this.anja(numero);
+  	this.anja();
   }
 
-  anja(n){
-  	var numero=n;
+  llamarAction(){
+  	var numero=0;
+
+  	let actionsheet=this.action.create({
+  		title:'Tipos de Jugada',
+  		cssClass:'actionCSS',
+  		buttons:[
+  		{
+  			text:'Numero',
+  			icon:!this.platform.is('ios')? 'radio-button-on': null,
+  			handler:()=>{
+  				//console.log("Un Numero");
+  				numero=1;
+  				this.mostrarCuadros(numero);
+  			}
+  		},{
+  			text:'Pale',
+  			icon:!this.platform.is('ios')? 'radio-button-on': null,
+  			handler:()=>{
+  				//console.log('Pale');
+  				numero=2;
+  				this.mostrarCuadros(numero);
+  			}
+  		},{
+  			text:'Tripleta',
+  			icon:!this.platform.is('ios')? 'radio-button-on': null,
+  			handler:()=>{
+  				//console.log('Tripleta');
+  				numero=3;
+  				this.mostrarCuadros(numero);
+  			}
+  		},{
+  			text:'Cancelar',
+  			role:'cancel',
+  			icon:!this.platform.is('ios')? 'close': null,
+  			handler:()=>{
+  				console.log('cancel');
+  			}
+  		}]
+  	});
+
+  	actionsheet.present();
+  	
+  }
+
+
+
+  anja(){
+  	
+
+  	this.llamarAction();
+  
+  }
+
+  mostrarCuadros(nNumero){
+  	var numero=nNumero;
   	$(document).ready(function(){
   		$(".cuadritoG").remove();
   		for(var i=0;i<=numero-1;i++){

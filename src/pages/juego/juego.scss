@@ -128,7 +128,7 @@
 .arriba-tres{
 	
 	margin:2% 0px;
-	height:5vh;
+	height:7vh;
 	width:100%;
 	padding:2px 30px;
 
@@ -205,7 +205,7 @@
 	height:10vh;
 	width:100%;
 	padding: 0px 5px;
-	margin: 3% 0px;
+	margin: 5% 0px;
 
 	display:flex;
 	flex-flow:row wrap;
@@ -217,7 +217,7 @@
 .btnCancelar{
 	width: 19%;
 	height: 100%;
-	background: #c0392b;
+	background: #ED4248;
 	border-radius: 5px;
 
 
@@ -248,7 +248,7 @@
 .btnLimpiar{
 	width: 19%;
 	height: 100%;
-	background: #d35400;
+	background: #EB974E;
 	border-radius: 5px;
 
 
@@ -279,7 +279,7 @@
 	height:50vh;
 	width:100%;
 	padding: 5px 5px;
-	margin: 3% 0px;
+	margin-top: 5%;
 
 	display:flex;
 	flex-flow:row wrap;
@@ -312,6 +312,31 @@
 .cuadroGame:active{
 	box-shadow: 0px 0px 10px 0px #DDD;
 }
+
+
+/*----------parte del actionshet-------*/
+
+.actionCSS{
+	text-align: center;
+	font-size: 20px;
+
+}
+
+.ion-md-radio-button-on{
+	color:#3498db;
+}
+
+.ion-md-close{
+	color:#ED4248;
+}
+
+
+
+
+
+
+
+
 
 
 
